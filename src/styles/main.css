@@ -53,10 +53,30 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-  src: url(../assets/fonts/fontname.ttf);
+  src: url(../assets/fonts/ProtestRevolution-Regular.ttf);
   font-family: "font-primary";
 }
 @font-face {
   src: url(../assets/fonts/fontname.ttf);
   font-family: "font-secondary";
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 1px solid green;
+}
+header h1 {
+  font-family: "font-primary";
+  font-size: 48px;
+}
+header nav img {
+  width: 1.6rem;
+  height: auto;
+}
+header div img {
+  width: 1.6rem;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+header {
+  @include flex(flex, row, space-between, center, nowrap);
+  outline: 1px solid green;
+
+  h1 {
+    font-family: 'font-primary';
+    font-size: 48px;
+  }
+
+  nav {
+    //
+    img {
+      width: 1.6rem;
+      height: auto;
+    }
+  }
+
+  div {
+    //
+    img {
+      width: 1.6rem;
+      height: auto;
+    }
+  }
+}
