@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/*
+  375-480 : Nagyobb telefonok iPhone 11-13 pro Max
+  768-1024 : Közepes méretü tabletek, iPad-ek, kissebb laptopok
+  1024-1440 : Közepes és nagyobb kijelzők. Sok nagy monitor és a modern nagyfelbontású laptopok ebbe a sávba esnek.
+  1440+ : Ultra széles monitorok, nagyfelbontású desktopok és professzionális munkára használt kijelzők.
+
+  375x812 : Ez a felbontás sok felhasználó eszközén jelenik meg, így érdemes alapértelmezett mobil méretként kezelni a mobil-first design során.
+  768x1024 : A legtöbb fejlesztő ezt a felbontást használja referenciaként, amikor tablet-nézetet tervez.
+  1024x768 : nagyon elterjedt a tabletek fekvő módjában, az egyik átmeneti méret a tabletek és asztali monitorok között.
+  1280x800 : A reszponzív designban ez az egyik legjellemzőbb szélesség, ami az asztali (desktop) felhasználói élmény kezdetét jelzi, miközben a tablet nézetek is közel állnak hozzá.
+  1440x900 : 1440px általában az egyik legnagyobb kijelzők közé tartozik, amit érdemes figyelembe venni.
+*/
+/*
+@include screen(desktop) {
+  width: 80vw;
+}
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-weight: 100;
+}
+
+@font-face {
+  src: url(../assets/fonts/fontname.ttf);
+  font-family: "font-primary";
+}
+@font-face {
+  src: url(../assets/fonts/fontname.ttf);
+  font-family: "font-secondary";
+}/*# sourceMappingURL=main.css.map */
