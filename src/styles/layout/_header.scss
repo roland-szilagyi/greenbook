@@ -1,25 +1,28 @@
 header {
   @include flex(flex, row, space-between, center, nowrap);
+  @include box(100vw, 10vh);
   outline: 1px solid green;
 
   h1 {
     font-family: 'font-primary';
-    font-size: 48px;
+    font-size: 40px;
   }
 
   nav {
     //
     img {
-      width: 1.6rem;
+      width: 1.4rem;
       height: auto;
+      margin: 1rem;
     }
   }
 
   div {
     //
     img {
-      width: 1.6rem;
+      width: 1.4rem;
       height: auto;
+      margin: 1rem;
     }
   }
 }
