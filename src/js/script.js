@@ -66,6 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 5. Kezdeti frissítés
+  // 5. Görgetés kezelése
+  carousel.addEventListener("wheel", (event) => {
+    if (event.deltaY > 0) { // Görgetés lefelé
+      if (currentIndex < totalItems - visibleItems) {
+        currentIndex++;
+      }
+    } else { // Görgetés felfelé
+      if (currentIndex > 0) {
+        currentIndex--;
+      }
+    }
+    updateCarousel();
+  });
+
+  // 6. Kezdeti frissítés
   updateCarousel();
 });
