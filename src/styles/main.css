@@ -57,7 +57,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "font-primary";
 }
 @font-face {
-  src: url(../assets/fonts/fontname.ttf);
+  src: url(../assets/fonts/Afacad-VariableFont_wght.ttf);
   font-family: "font-secondary";
 }
 .searchbar {
@@ -111,6 +111,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .dailyupdate .dailyupdate__cont .title__cont h3 {
   color: brown;
   font-family: "font-primary";
+  font-size: 1.4rem;
 }
 .dailyupdate .dailyupdate__cont .img__cont img {
   width: 18rem;
@@ -129,6 +130,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .dailyupdate .dailyupdate__cont .details__cont .details__title__cont h6 {
   color: brown;
+  font-family: "font-secondary";
   font-size: 1.2rem;
 }
 .dailyupdate .dailyupdate__cont .details__cont .details__info__cont {
@@ -145,6 +147,10 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .time__cont p {
+  font-family: "font-secondary";
+  font-size: 1rem;
 }
 .dailyupdate .dailyupdate__cont .details__cont .details__info__cont .time__cont .icon--clock {
   fill: black;

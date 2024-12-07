@@ -8,8 +8,9 @@
     .title__cont {
       
       h3 {
-        color: brown;
+        color: brown; //
         font-family: 'font-primary';
+        font-size: 1.4rem;
       }
     }
 
@@ -29,7 +30,8 @@
       .details__title__cont {
         
         h6 {
-          color: brown;
+          color: brown; //
+          font-family: 'font-secondary';
           font-size: 1.2rem;
         }
       }
@@ -40,6 +42,11 @@
 
         .time__cont {
           @include flex(flex, row, center, center, nowrap);
+
+          p {
+            font-family: 'font-secondary';
+            font-size: 1rem;
+          }
 
           .icon--clock {
             @include icon;
