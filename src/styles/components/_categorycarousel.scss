@@ -5,6 +5,7 @@
   @include flex(flex, column, center, center, nowrap);
   background-color: lightblue;
   position: relative;
+  overflow: hidden;
   margin: auto;
 
   .title__cont {

@@ -194,6 +194,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   background-color: lightblue;
   position: relative;
+  overflow: hidden;
   margin: auto;
 }
 .category__carousel .title__cont {
