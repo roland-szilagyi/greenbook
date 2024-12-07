@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 5. Görgetés kezelése
+  // 5. Görgetés kezelése touchmove és wheel eseményeken keresztül
   carousel.addEventListener("wheel", (event) => {
     if (event.deltaY > 0) { // Görgetés lefelé
       if (currentIndex < totalItems - visibleItems) {
@@ -77,6 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex--;
       }
     }
+    updateCarousel();
+  });
+
+  carousel.addEventListener("touchmove", (event) => {
+    const touchMoveDistance = event.touches[0].clientX;
+    const direction = touchMoveDistance < itemWidth / 2 ? -1 : 1;
+
+    if ((currentIndex > 0 && direction < 0) || (currentIndex < totalItems - visibleItems && direction > 0)) {
+      currentIndex += direction;
+    }
+
     updateCarousel();
   });
 
