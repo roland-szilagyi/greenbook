@@ -27,6 +27,10 @@
   height: auto;
 }
 
+@mixin icon-small() {
+  width: 1rem;
+}
+
 @mixin icon-hover() {
   fill: grey;
 }

@@ -50,6 +50,7 @@
 
           .icon--clock {
             @include icon;
+            @include icon-small;
           }
         }
 

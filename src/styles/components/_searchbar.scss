@@ -1,6 +1,5 @@
 .searchbar {
   @include flex(flex, row, center, center, nowrap);
-  outline: 1px dotted black;
   background-color: bisque;
   
   form {
