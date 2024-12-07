@@ -1,0 +1,84 @@
+
+
+/* Alapbeállítások a carousel-hez */
+.category__carousel {
+  @include flex(flex, column, center, center, nowrap);
+  background-color: lightblue;
+  position: relative;
+  margin: auto;
+
+  .title__cont {
+    width: 85vw;
+
+    h3 {
+      color: brown; //
+      font-family: 'font-primary';
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* Carousel tartalom */
+.category__carousel__cont {
+  display: flex;
+  transition: transform 0.3s ease-in-out; /* Smooth mozgás */
+  will-change: transform; /* Optimalizált renderelés */
+}
+
+/* Linkek (a képek körül) */
+.category__carousel__cont a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none; /* Alapértelmezett aláhúzás eltávolítása */
+}
+
+/* Képek */
+.category__carousel__cont img {
+  // outline: 2px dotted green;
+  width: 30vw; /* A kép teljes szélességet kitölti a linkben */
+  height: 8rem; /* Arányosan méretezi magát */
+  display: block; /* Felesleges margók elkerülése */
+  border: 0; /* Ha a böngésző alapértelmezetten keretet adna a képre */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Navigációs gombok */
+.carousel__btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Átlátszó fekete háttér */
+  color: white;
+  border: none;
+  padding: 5px 7px;
+  cursor: pointer;
+  z-index: 1; /* Mindig a képek felett legyen */
+  border-radius: 50%; /* Kör alakú gomb */
+}
+
+.carousel__btn:disabled {
+  opacity: 0.3; /* Halványított állapot */
+  pointer-events: none; /* Kattinthatóság tiltása */
+  cursor: default; /* Alapértelmezett egérkurzor */
+}
+
+.carousel__btn--prev {
+  left: 10px;
+}
+
+.carousel__btn--next {
+  right: 10px;
+}
+
+/* Gomb hover állapot */
+.carousel__btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Reszponzív megjelenítés */
+@media (max-width: 768px) {
+  .category__carousel__cont a {
+    flex: 0 0 calc(100% / 3); /* Mobilon 2 kép jelenjen meg */
+  }
+}
