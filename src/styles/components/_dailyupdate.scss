@@ -17,7 +17,7 @@
     .img__cont {
 
       img {
-        width: 18rem;
+        width: 80vw;
         height: 22rem;
         object-fit: cover;
         object-position: center;
@@ -38,7 +38,7 @@
 
       .details__info__cont {
         @include flex(flex, row, space-between, center, nowrap);
-        width: 18rem;
+        width: 80vw;
 
         .time__cont {
           @include flex(flex, row, center, center, nowrap);

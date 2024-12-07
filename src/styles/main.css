@@ -113,7 +113,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1.4rem;
 }
 .dailyupdate .dailyupdate__cont .img__cont img {
-  width: 18rem;
+  width: 80vw;
   height: 22rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -138,7 +138,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  width: 18rem;
+  width: 80vw;
 }
 .dailyupdate .dailyupdate__cont .details__cont .details__info__cont .time__cont {
   display: flex;
