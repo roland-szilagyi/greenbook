@@ -48,6 +48,8 @@
     @include flex(flex, row, flex-start, center, nowrap);
     transition: transform 0.3s ease-in-out;
     will-change: transform;
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-x: repeat(1rem);
   }
   
   .category__carousel__cont a {
