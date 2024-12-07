@@ -185,90 +185,108 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: auto;
 }
-/* Alapbeállítások a carousel-hez */
 .category__carousel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: lightblue;
+  background-color: lightsalmon;
   position: relative;
   overflow: hidden;
-  margin: auto;
 }
 .category__carousel .title__cont {
-  width: 85vw;
+  outline: 1px solid green;
 }
 .category__carousel .title__cont h3 {
   color: brown;
   font-family: "font-primary";
   font-size: 1.4rem;
+  width: 85vw;
 }
 
-/* Carousel tartalom */
 .category__carousel__cont {
   display: flex;
-  transition: transform 0.3s ease-in-out; /* Smooth mozgás */
-  will-change: transform; /* Optimalizált renderelés */
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
-/* Linkek (a képek körül) */
 .category__carousel__cont a {
   display: flex;
   justify-content: center;
-  text-decoration: none; /* Alapértelmezett aláhúzás eltávolítása */
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Képek */
+.category__carousel__cont a:hover img {
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.category__carousel__cont a::after {
+  content: attr(data-hover-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.category__carousel__cont a:hover::after {
+  opacity: 1;
+}
+
 .category__carousel__cont img {
-  width: 30vw; /* A kép teljes szélességet kitölti a linkben */
-  height: 8rem; /* Arányosan méretezi magát */
-  display: block; /* Felesleges margók elkerülése */
-  border: 0; /* Ha a böngésző alapértelmezetten keretet adna a képre */
+  width: 30vw;
+  height: 8rem;
+  display: block;
+  border: 0;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Navigációs gombok */
 .carousel__btn {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Átlátszó fekete háttér */
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 5px 7px;
   cursor: pointer;
-  z-index: 1; /* Mindig a képek felett legyen */
-  border-radius: 50%; /* Kör alakú gomb */
+  z-index: 1;
+  border-radius: 50%;
 }
-
 .carousel__btn:disabled {
-  opacity: 0.3; /* Halványított állapot */
-  pointer-events: none; /* Kattinthatóság tiltása */
-  cursor: default; /* Alapértelmezett egérkurzor */
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
 }
-
 .carousel__btn--prev {
-  left: 10px;
+  left: 1vw;
 }
-
 .carousel__btn--next {
-  right: 10px;
+  right: 1vw;
 }
-
-/* Gomb hover állapot */
 .carousel__btn:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Reszponzív megjelenítés */
 @media (max-width: 768px) {
   .category__carousel__cont a {
-    flex: 0 0 33.3333333333%; /* Mobilon 2 kép jelenjen meg */
+    flex: 0 0 33.3333333333%;
   }
 }
 header {
