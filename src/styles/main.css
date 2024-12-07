@@ -60,6 +60,126 @@ p, h1, h2, h3, h4, h5, h6 {
   src: url(../assets/fonts/fontname.ttf);
   font-family: "font-secondary";
 }
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 1px dotted black;
+  background-color: bisque;
+}
+.searchbar form {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.searchbar form input {
+  width: 70vw;
+  margin: 0.5rem;
+  padding: 0.35rem;
+  border-color: green;
+  border-radius: 1rem;
+}
+.searchbar form .icon--search {
+  fill: black;
+  width: 1.8rem;
+  height: auto;
+}
+.searchbar form .icon--search:hover {
+  fill: grey;
+}
+
+.dailyupdate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: lightblue;
+}
+.dailyupdate .dailyupdate__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.dailyupdate .dailyupdate__cont .title__cont h3 {
+  color: brown;
+  font-family: "font-primary";
+}
+.dailyupdate .dailyupdate__cont .img__cont img {
+  width: 18rem;
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.dailyupdate .dailyupdate__cont .details__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: nowrap;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__title__cont h6 {
+  color: brown;
+  font-size: 1.2rem;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 18rem;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .time__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .time__cont .icon--clock {
+  fill: black;
+  width: 1.8rem;
+  height: auto;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .favorite__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .favorite__cont .icon--heartplus {
+  fill: black;
+  width: 1.8rem;
+  height: auto;
+}
+.dailyupdate .dailyupdate__cont .details__cont .details__info__cont .favorite__cont .icon--heartplus:hover {
+  fill: grey;
+}
+
+.foodcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 42vw;
+  height: auto;
+}
+.foodcard img {
+  width: 100%;
+  height: auto;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -68,19 +188,27 @@ header {
   flex-wrap: nowrap;
   width: 100vw;
   height: 10vh;
-  outline: 1px solid green;
+  background-color: darkseagreen;
 }
 header h1 {
   font-family: "font-primary";
   font-size: 40px;
 }
-header nav img {
-  width: 1.4rem;
+header nav .icon--menu {
+  fill: black;
+  width: 1.8rem;
   height: auto;
   margin: 1rem;
 }
-header div img {
-  width: 1.4rem;
+header nav .icon--menu:hover {
+  fill: grey;
+}
+header div .icon--user {
+  fill: black;
+  width: 1.8rem;
   height: auto;
   margin: 1rem;
+}
+header div .icon--user:hover {
+  fill: grey;
 }/*# sourceMappingURL=main.css.map */

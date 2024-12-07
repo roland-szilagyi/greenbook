@@ -1,0 +1,25 @@
+.searchbar {
+  @include flex(flex, row, center, center, nowrap);
+  outline: 1px dotted black;
+  background-color: bisque;
+  
+  form {
+    height: 5rem;
+    @include flex(flex, row, center, center, nowrap);
+
+    input {
+      width: 70vw;
+      margin: 0.5rem;
+      padding: 0.35rem;
+      border-color: green;
+      border-radius: 1rem;
+    }
+
+    .icon--search {
+      @include icon;
+    }
+    .icon--search:hover {
+      @include icon-hover;
+    }
+  }
+}

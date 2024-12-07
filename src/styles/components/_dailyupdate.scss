@@ -1,0 +1,63 @@
+.dailyupdate {
+  @include flex(flex, column, center, center, nowrap);
+  background-color: lightblue;
+
+  .dailyupdate__cont {
+    @include flex(flex, column, center, flex-start, nowrap);
+
+    .title__cont {
+      
+      h3 {
+        color: brown;
+        font-family: 'font-primary';
+      }
+    }
+
+    .img__cont {
+
+      img {
+        width: 18rem;
+        height: 22rem;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .details__cont {
+      @include flex(flex, column, center, space-between, nowrap);
+
+      .details__title__cont {
+        
+        h6 {
+          color: brown;
+          font-size: 1.2rem;
+        }
+      }
+
+      .details__info__cont {
+        @include flex(flex, row, space-between, center, nowrap);
+        width: 18rem;
+
+        .time__cont {
+          @include flex(flex, row, center, center, nowrap);
+
+          .icon--clock {
+            @include icon;
+          }
+        }
+
+        .favorite__cont {
+          @include flex(flex, row, center, center, nowrap);
+
+          .icon--heartplus {
+            @include icon;
+          }
+    
+          .icon--heartplus:hover {
+            @include icon-hover;
+          }
+        }
+      }
+    }
+  }
+}

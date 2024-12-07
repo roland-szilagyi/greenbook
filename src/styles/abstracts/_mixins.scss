@@ -20,6 +20,17 @@
   line-height: $line-height;
 }
 
+// ICON DETAILS
+@mixin icon() {
+  fill: black;
+  width: 1.8rem;
+  height: auto;
+}
+
+@mixin icon-hover() {
+  fill: grey;
+}
+
 @mixin outline() {
   outline: 1px dashed yellow;
 }

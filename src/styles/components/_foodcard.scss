@@ -1,0 +1,17 @@
+.foodcard {
+  @include flex(flex, column, flex-start, center, nowrap);
+  @include box(42vw, auto);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h5 {
+    //
+  }
+
+  p {
+    //
+  }
+}

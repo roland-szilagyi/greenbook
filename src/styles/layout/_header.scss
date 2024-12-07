@@ -1,7 +1,7 @@
 header {
   @include flex(flex, row, space-between, center, nowrap);
   @include box(100vw, 10vh);
-  outline: 1px solid green;
+  background-color: darkseagreen;
 
   h1 {
     font-family: 'font-primary';
@@ -9,20 +9,22 @@ header {
   }
 
   nav {
-    //
-    img {
-      width: 1.4rem;
-      height: auto;
+    .icon--menu {
+      @include icon;
       margin: 1rem;
+    }
+    .icon--menu:hover {
+      @include icon-hover;
     }
   }
 
   div {
-    //
-    img {
-      width: 1.4rem;
-      height: auto;
+    .icon--user {
+      @include icon;
       margin: 1rem;
+    }
+    .icon--user:hover {
+      @include icon-hover;
     }
   }
 }
