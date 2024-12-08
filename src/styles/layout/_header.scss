@@ -2,29 +2,41 @@ header {
   @include flex(flex, row, space-between, center, nowrap);
   @include box(100vw, 10vh);
   background-color: darkseagreen;
+  
+  .nav-list { // left-side links
+    @include flex(flex, row, flex-start, center, nowrap);
+    @include screen('desktop') {
+      width: 33vw;
+    }
 
-  h1 {
-    font-family: 'font-primary';
-    font-size: 40px;
-  }
-
-  nav {
-    .icon--menu {
+    svg {
+      display: block;
       @include icon;
       margin: 1rem;
+      @include screen('desktop') {
+        display: none;
+      }
     }
-    .icon--menu:hover {
-      @include icon-hover;
+
+    a {
+      display: none;
+      font-size: 1.2rem;
+      font-family: 'font-secondary';
+      margin: 0 1rem;
+      @include screen('desktop') {
+        display: block;
+      }
     }
   }
 
-  div {
-    .icon--user {
-      @include icon;
-      margin: 1rem;
-    }
-    .icon--user:hover {
-      @include icon-hover;
+  .nav-list:last-child { // right-side links
+    @include flex(flex, row, flex-end, center, nowrap);
+  }
+
+  .title__cont {
+    h1 {
+      font-family: 'font-primary';
+      font-size: 2.5rem;
     }
   }
 }

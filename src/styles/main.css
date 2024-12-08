@@ -300,25 +300,49 @@ header {
   height: 10vh;
   background-color: darkseagreen;
 }
-header h1 {
+header .nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  header .nav-list {
+    width: 33vw;
+  }
+}
+header .nav-list svg {
+  display: block;
+  fill: black;
+  width: 1.8rem;
+  height: auto;
+  margin: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  header .nav-list svg {
+    display: none;
+  }
+}
+header .nav-list a {
+  display: none;
+  font-size: 1.2rem;
+  font-family: "font-secondary";
+  margin: 0 1rem;
+}
+@media screen and (min-width: 1024px) {
+  header .nav-list a {
+    display: block;
+  }
+}
+header .nav-list:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header .title__cont h1 {
   font-family: "font-primary";
-  font-size: 40px;
-}
-header nav .icon--menu {
-  fill: black;
-  width: 1.8rem;
-  height: auto;
-  margin: 1rem;
-}
-header nav .icon--menu:hover {
-  fill: grey;
-}
-header div .icon--user {
-  fill: black;
-  width: 1.8rem;
-  height: auto;
-  margin: 1rem;
-}
-header div .icon--user:hover {
-  fill: grey;
+  font-size: 2.5rem;
 }/*# sourceMappingURL=main.css.map */
