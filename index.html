@@ -9,30 +9,9 @@
 <body>
 
   <!-- HEADER LAYOUT -->
-  <!-- <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label class="checkbtn" for="check">
-        <svg class="icon--menu  menu-toggle" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-      </label>
-      <ul class="nav-list">
-        <li><a href="#categories"></a>Categories</li>
-        <li><a href="#tipps"></a>Tipps</li>
-        <li><a href="#about"></a>About</li>
-        <li><a href="#favorites"></a>Favorites</li>
-        <li><a href="#login"></a>Login</li>
-      </ul>
-    </nav>
-    <h1>Tasty.</h1>
-    <div>
-      <svg class="icon--user" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
-    </div>
-  </header>
--->
-
   <header>
     <div class="nav-list">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      <svg class="js-icon--menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
       <a href="#categories">Categories</a>
       <a href="#tipps">Tipps</a>
       <a href="#about">About</a>
@@ -46,6 +25,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
     </div>
   </header>
+  <div class="menu-display"><!-- JS GEN --></div>
 
   <!-- SEARCHBAR COMPONENT-->
   <aside class="searchbar">
@@ -54,6 +34,41 @@
       <input type="search" placeholder="Start searching...">
     </form>
   </aside>
+
+  <!-- FOODDETAILS-PAGE -->
+   <article class="fooddetailspage">
+      <h2>Paprikás krumpli</h2> <!-- <h2>{$food-title}</h2> JS GEN -->
+      <img src="/src/assets/images/sample.jpeg" alt="#"> <!-- <img src="{img-src}" alt="#"> JS GEN -->
+      <div class="time-info__cont">
+        <div class="pre">
+          <p>Pre</p>
+          <p>time</p> <!-- <p>{$pre-time}</p> JS GEN -->
+        </div>
+        <div class="baked">
+          <p>Baked</p>
+          <p>time</p> <!-- <p>{baked-time}</p> JS GEN -->
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <p>time</p> <!-- <p>{total-time}</p> JS GEN -->
+        </div>
+      </div>
+
+      <div class="tools__cont">
+        <h2>Hozzávalók</h2>
+        <ul>
+          <!-- <li>{$mennyiség} + {alkatrész}</li> JS GEN -->
+        </ul>
+      </div>
+
+      <div class="preparation__cont">
+        <h2>Elkészítés</h2>
+        <div class="details__cont"> <!-- <p>{$number}</p>, <p>{$text}</p> JS GEN -->
+          <p>number</p>
+          <p>text</p>
+        </div>
+      </div>
+   </article>
 
   <!-- DAILY-UPDATE COMPONENT -->
   <article class="dailyupdate">

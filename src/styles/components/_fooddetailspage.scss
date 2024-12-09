@@ -1,0 +1,36 @@
+.fooddetailspage {
+  @include flex(flex, column, center, center, nowrap);
+
+  h2 {
+
+  }
+
+  img {
+    width: 100vw;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .time-info__cont {
+    @include flex(flex, row, center, center, nowrap);
+
+    .pre {
+      @include flex(flex, column, space-evenly, center, nowrap);
+      @include box(33.33vw, 10rem);
+      outline: 1px dotted black;
+    }
+
+    .baked {
+      @include flex(flex, column, space-evenly, center, nowrap);
+      @include box(33.33vw, 10rem);
+      outline: 1px dotted black;
+    }
+
+    .total {
+      @include flex(flex, column, space-evenly, center, nowrap);
+      @include box(33.33vw, 10rem);
+      outline: 1px dotted black;
+    }
+  }
+}

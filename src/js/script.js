@@ -94,3 +94,47 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6. Kezdeti frissítés
   updateCarousel();
 });
+
+///////////////////// ------ HAMBURGER MENü LOGIKA
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".js-icon--menu");
+  const navLists = document.querySelectorAll(".nav-list"); // Minden .nav-list elem
+  const menuDisplay = document.querySelector(".menu-display");
+
+  // Menüt nyitó/záró esemény
+  menuIcon.addEventListener("click", (event) => {
+    event.stopPropagation(); // Megakadályozza, hogy az esemény továbbterjedjen a document-re
+    if (menuDisplay.classList.contains("show")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Bárhova máshova kattintva a menü bezáródik
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".menu-display") && !event.target.closest(".js-icon--menu")) {
+      closeMenu();
+    }
+  });
+
+  function openMenu() {
+    menuDisplay.classList.add("show");
+
+    // Gyűjtsük össze az összes nav-list elemeit
+    let items = "";
+    navLists.forEach(navList => {
+      items += Array.from(navList.querySelectorAll("a"))
+        .map(item => `<div>${item.outerHTML}</div>`)
+        .join("");
+    });
+
+    menuDisplay.innerHTML = items;
+  }
+
+  function closeMenu() {
+    menuDisplay.classList.remove("show");
+    menuDisplay.innerHTML = "";
+  }
+});
