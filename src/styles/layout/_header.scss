@@ -3,7 +3,11 @@ header {
   @include box(100vw, 10vh);
   background-color: darkseagreen;
   
-  .nav-list { // left-side links
+  nav:last-child {    // right-side links
+    @include flex(flex, row, flex-end, center, nowrap);
+  }
+
+  nav {               // left-side links
     @include flex(flex, row, flex-start, center, nowrap);
     @include screen('desktop') {
       width: 33vw;
@@ -11,7 +15,7 @@ header {
 
     svg {
       display: block;
-      margin: 1rem;
+      margin: $spacing-lg;
       cursor: pointer;
       @include icon;
       @include screen('desktop') {
@@ -21,37 +25,35 @@ header {
 
     a {
       display: none;
-      font-size: 1.2rem;
+      font-size: $size-xs;
       font-family: 'font-secondary';
-      margin: 0 1rem;
+      margin: 0 $spacing-lg;
       @include screen('desktop') {
         display: block;
       }
     }
   }
 
-  .nav-list:last-child { // right-side links
-    @include flex(flex, row, flex-end, center, nowrap);
-  }
-
-  .title__cont {
-    h1 {
-      font-family: 'font-primary';
-      font-size: 2.5rem;
-    }
+  h1 {
+    font-family: 'font-primary';
+    font-size: $size-xl;
   }
 }
 
-.menu-display {
-  display: none; /* Kezdetben rejtve */
+.ham-menu  {
+  display: none;
   position: absolute;
   height: 100vh;
   width: 100vw;
   background: #f0f0f0;
-  padding: 10px;
+  padding: $spacing-lg;
   border: 1px solid #ccc;
   z-index: 2;
 }
-.menu-display.show {
+.show {
   display: block;
+}
+
+.hide {
+  display: none;
 }

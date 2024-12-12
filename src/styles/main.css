@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /*
+@include screen('desktop') {
+  width: 80vw;
+}
+*/
+/*
   375-480 : Nagyobb telefonok iPhone 11-13 pro Max
   768-1024 : Közepes méretü tabletek, iPad-ek, kissebb laptopok
   1024-1440 : Közepes és nagyobb kijelzők. Sok nagy monitor és a modern nagyfelbontású laptopok ebbe a sávba esnek.
@@ -10,11 +15,6 @@
   1024x768 : nagyon elterjedt a tabletek fekvő módjában, az egyik átmeneti méret a tabletek és asztali monitorok között.
   1280x800 : A reszponzív designban ez az egyik legjellemzőbb szélesség, ami az asztali (desktop) felhasználói élmény kezdetét jelzi, miközben a tablet nézetek is közel állnak hozzá.
   1440x900 : 1440px általában az egyik legnagyobb kijelzők közé tartozik, amit érdemes figyelembe venni.
-*/
-/*
-@include screen(desktop) {
-  width: 80vw;
-}
 */
 * {
   box-sizing: border-box;
@@ -297,7 +297,7 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: nowrap;
 }
-.fooddetailspage img {
+.fooddetailspage .img__cont img {
   width: 100vw;
   height: 25rem;
   -o-object-fit: cover;
@@ -353,7 +353,14 @@ header {
   height: 10vh;
   background-color: darkseagreen;
 }
-header .nav-list {
+header nav:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -361,11 +368,11 @@ header .nav-list {
   flex-wrap: nowrap;
 }
 @media screen and (min-width: 1024px) {
-  header .nav-list {
+  header nav {
     width: 33vw;
   }
 }
-header .nav-list svg {
+header nav svg {
   display: block;
   margin: 1rem;
   cursor: pointer;
@@ -374,44 +381,41 @@ header .nav-list svg {
   height: auto;
 }
 @media screen and (min-width: 1024px) {
-  header .nav-list svg {
+  header nav svg {
     display: none;
   }
 }
-header .nav-list a {
+header nav a {
   display: none;
   font-size: 1.2rem;
   font-family: "font-secondary";
   margin: 0 1rem;
 }
 @media screen and (min-width: 1024px) {
-  header .nav-list a {
+  header nav a {
     display: block;
   }
 }
-header .nav-list:last-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-header .title__cont h1 {
+header h1 {
   font-family: "font-primary";
   font-size: 2.5rem;
 }
 
-.menu-display {
-  display: none; /* Kezdetben rejtve */
+.ham-menu {
+  display: none;
   position: absolute;
   height: 100vh;
   width: 100vw;
   background: #f0f0f0;
-  padding: 10px;
+  padding: 1rem;
   border: 1px solid #ccc;
   z-index: 2;
 }
 
-.menu-display.show {
+.show {
   display: block;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

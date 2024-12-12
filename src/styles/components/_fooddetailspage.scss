@@ -5,11 +5,14 @@
 
   }
 
-  img {
-    width: 100vw;
-    height: 25rem;
-    object-fit: cover;
-    object-position: center;
+  .img__cont {
+
+    img {
+      width: 100vw;
+      height: 25rem;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   .time-info__cont {
@@ -26,7 +29,7 @@
       @include box(33.33vw, 10rem);
       outline: 1px dotted black;
     }
-
+ha nekem lenne 100 millio dolllarom akkor kurvara venek egy hazat... akkkor nem llhet hogyckulon maradjunk 
     .total {
       @include flex(flex, column, space-evenly, center, nowrap);
       @include box(33.33vw, 10rem);
