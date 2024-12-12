@@ -1,6 +1,6 @@
 import { foodDetails } from "./fooddetails.js";
 
-export function initializeCategoryCarousel() {
+export function initializeCarousel() {
   let carouselCard = document.querySelector('.js-carouselcard');
   let ofTheWeekTime = document.querySelector('.js-cooktime');
   let titleName = document.querySelector('.js-titlename');

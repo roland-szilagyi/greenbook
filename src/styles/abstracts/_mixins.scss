@@ -12,25 +12,3 @@
   width: $width;
   height: $height;
 }
-
-// FONT-SIZE
-@mixin font-size($font-size, $letter-spacing, $line-height) {
-  font-size: $font-size;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height;
-}
-
-// ICON DETAILS
-@mixin icon() {
-  fill: black;
-  width: 1.8rem;
-  height: auto;
-}
-
-@mixin icon-small() {
-  width: 1rem;
-}
-
-@mixin icon-hover() {
-  fill: grey;
-}

@@ -9,12 +9,17 @@
 @import "./base/typography";
 
 // COMPONENTS
+@import "./components/carousel";
+@import "./components/carousel-elements";
+@import "./components/hamburger";
+@import "./components/navigation";
+@import "./components/recipe-card-m";
+@import "./components/recipe-card-l";
+@import "./components/recipe-details";
 @import "./components/searchbar";
-@import "./components/dailyupdate";
-@import "./components/foodcard";
-@import "./components/categorycarousel";
-@import "./components/fooddetailspage";
+@import "./components/spot";
 
 // LAYOUT
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/main";
