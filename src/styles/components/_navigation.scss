@@ -1,0 +1,31 @@
+nav {
+  @include screen('desktop') {
+    width: 33vw;
+  } 
+
+  svg {
+    display: block;
+    margin: $spacing-lg;
+    cursor: pointer;
+    @include screen('desktop') {
+      display: none;
+    }
+  }
+
+  a {
+    display: none;
+    margin: $spacing-lg;
+    @include screen('desktop') {
+      display: block;
+    }
+  }
+}
+
+.nav-left {
+  @include flex(flex, row, flex-start, center, nowrap); 
+}
+
+.nav-right {
+  @include flex(flex, row, flex-end, center, nowrap);
+}
+

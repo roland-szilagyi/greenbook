@@ -1,2 +1,5 @@
-import { foodDetails } from "./fooddetails.js";
-import { initializeHamburgerMenu } from "./hamburgermenu.js";
+import { renderHeader } from "./header.js";
+import { renderSearchbar } from "./searchbar.js";
+
+renderHeader();
+renderSearchbar();

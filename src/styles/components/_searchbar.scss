@@ -1,0 +1,21 @@
+aside {
+  @include flex(flex, row, center, center, nowrap);
+  @include box(100vw, 5rem);
+  background-color: bisque;
+  
+  form {
+    @include flex(flex, row, center, center, nowrap);
+
+    input {
+      width: 60vw;
+      margin: 0.5rem;
+      padding: 0.35rem;
+      border-radius: 1rem;
+    }
+
+    .icon--search {
+    }
+    .icon--search:hover {
+    }
+  }
+}
