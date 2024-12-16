@@ -124,6 +124,63 @@ aside form input {
   padding: 0.35rem;
   border-radius: 1rem;
 }
+.spot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: lightblue;
+}
+.spot .title__cont h3 {
+  font-size: 1.4rem;
+}
+.spot .img__cont img {
+  width: 85vw;
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.spot .details__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: nowrap;
+}
+.spot .details__cont .details__title__cont h6 {
+  color: brown;
+  font-family: "font-secondary";
+  font-size: 1.2rem;
+}
+.spot .details__cont .details__info__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 85vw;
+}
+.spot .details__cont .details__info__cont .time__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.spot .details__cont .details__info__cont .time__cont p {
+  font-family: "font-secondary";
+  font-size: 1rem;
+}
+.spot .details__cont .details__info__cont .favorite__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -137,4 +194,12 @@ header {
 header h1 {
   font-family: "font-primary";
   font-size: 2.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }/*# sourceMappingURL=main.css.map */

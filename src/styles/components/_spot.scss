@@ -1,0 +1,64 @@
+.spot {
+  @include flex(flex, column, center, center, nowrap);
+  background-color: lightblue;
+
+  .title__cont {
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .img__cont {
+
+    img {
+      width: 85vw;
+      height: 18rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .details__cont {
+    @include flex(flex, column, center, space-between, nowrap);
+
+    .details__title__cont {
+      
+      h6 {
+        color: brown; //
+        font-family: 'font-secondary';
+        font-size: 1.2rem;
+      }
+    }
+
+    .details__info__cont {
+      @include flex(flex, row, space-between, center, nowrap);
+      width: 85vw;
+
+      .time__cont {
+        @include flex(flex, row, center, center, nowrap);
+
+        p {
+          font-family: 'font-secondary';
+          font-size: 1rem;
+        }
+
+        .icon--clock {
+          
+        }
+      }
+
+      .favorite__cont {
+        @include flex(flex, row, center, center, nowrap);
+
+        .icon--heartplus {
+
+        }
+  
+        .icon--heartplus:hover {
+
+        }
+      }
+    }
+  }
+}
