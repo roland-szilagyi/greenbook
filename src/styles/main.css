@@ -101,6 +101,65 @@ nav a {
   flex-wrap: nowrap;
 }
 
+.recipecard-m {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  outline: 1px solid blue;
+  background-color: lavender;
+}
+.recipecard-m h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: brown;
+}
+.recipecard-m img {
+  width: 15rem;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.recipecard-l {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 1px solid blue;
+  background-color: lavender;
+}
+.recipecard-l .img__cont img {
+  width: 12rem;
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.recipecard-l .content__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.recipecard-l .content__cont h2 {
+  color: brown;
+}
+.recipecard-l .content__cont p {
+  color: green;
+}
+
 .recipedetails {
   display: flex;
   flex-direction: column;

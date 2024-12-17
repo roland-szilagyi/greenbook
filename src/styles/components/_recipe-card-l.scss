@@ -1,0 +1,28 @@
+.recipecard-l {
+  @include flex(flex, row, space-evenly, center, nowrap);
+  outline: 1px solid blue;
+  background-color: lavender;
+  
+  .img__cont {
+
+    img {
+      width: 12rem;
+      height: 12rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content__cont {
+    @include flex(flex, column, space-evenly, flex-start, nowrap);
+    
+
+    h2 {
+      color: brown;
+    }
+
+    p {
+      color: green;
+    }
+  }
+}

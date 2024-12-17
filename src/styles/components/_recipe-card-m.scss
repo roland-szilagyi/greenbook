@@ -1,0 +1,23 @@
+.recipecard-m {
+  @include flex(flex, row, center, center, nowrap);
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  outline: 1px solid blue;
+  background-color: lavender;
+  
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: brown;
+  }
+
+  img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+  }
+}
