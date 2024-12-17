@@ -101,6 +101,61 @@ nav a {
   flex-wrap: nowrap;
 }
 
+.recipedetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: lightseagreen;
+}
+.recipedetails .img__cont img {
+  width: 85vw;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  outline: 1px dotted yellow;
+}
+.recipedetails .time-info__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.recipedetails .time-info__cont .pre {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 33.33vw;
+  height: 10rem;
+  outline: 1px dotted black;
+}
+.recipedetails .time-info__cont .baked {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 33.33vw;
+  height: 10rem;
+  outline: 1px dotted black;
+}
+.recipedetails .time-info__cont .total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 33.33vw;
+  height: 10rem;
+  outline: 1px dotted black;
+}
+
 aside {
   display: flex;
   flex-direction: row;
@@ -132,6 +187,13 @@ aside form input {
   flex-wrap: nowrap;
   background-color: lightblue;
 }
+.spot .title__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .spot .title__cont h3 {
   font-size: 1.4rem;
 }
@@ -147,8 +209,9 @@ aside form input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
+  align-items: flex-start;
   flex-wrap: nowrap;
+  width: 85vw;
 }
 .spot .details__cont .details__title__cont h6 {
   color: brown;
@@ -158,29 +221,15 @@ aside form input {
 .spot .details__cont .details__info__cont {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 85vw;
-}
-.spot .details__cont .details__info__cont .time__cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.spot .details__cont .details__info__cont .time__cont p {
+.spot .details__cont .details__info__cont p {
   font-family: "font-secondary";
   font-size: 1rem;
 }
-.spot .details__cont .details__info__cont .favorite__cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
+
 header {
   display: flex;
   flex-direction: row;
