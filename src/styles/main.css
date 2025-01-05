@@ -60,6 +60,111 @@ p, h1, h2, h3, h4, h5, h6 {
   src: url(../assets/fonts/Afacad-VariableFont_wght.ttf);
   font-family: "font-secondary";
 }
+.category__carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: lightsalmon;
+  position: relative;
+  overflow: hidden;
+}
+.category__carousel .title__cont h3 {
+  color: brown;
+  font-family: "font-primary";
+  font-size: 1.4rem;
+  width: 85vw;
+}
+.category__carousel .carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.category__carousel .carousel__btn:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+.category__carousel .carousel__btn--prev {
+  left: 1vw;
+}
+.category__carousel .carousel__btn--next {
+  right: 1vw;
+}
+.category__carousel .carousel__btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.category__carousel .category__carousel__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  scroll-snap-type: x mandatory;
+  scroll-snap-points-x: repeat(1rem);
+}
+.category__carousel .category__carousel__cont a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  color: white;
+  font-family: "font-secondary";
+  text-decoration: none;
+  overflow: hidden;
+}
+.category__carousel .category__carousel__cont a:hover img {
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  filter: brightness(0.4);
+}
+.category__carousel .category__carousel__cont a::after {
+  content: attr(data-hover-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.category__carousel .category__carousel__cont a:hover::after {
+  opacity: 1;
+  filter: none;
+}
+.category__carousel .category__carousel__cont img {
+  width: 30vw;
+  height: 8rem;
+  display: block;
+  border: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.3s ease-in-out;
+  border: 0.5rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .category__carousel__cont a {
+    flex: 0 0 33.3333333333%;
+  }
+}
 @media screen and (min-width: 1024px) {
   nav {
     width: 33vw;
@@ -138,6 +243,9 @@ nav a {
   outline: 1px solid blue;
   background-color: lavender;
 }
+.recipecard-l .img__cont {
+  /* Placeholder for future styles */
+}
 .recipecard-l .img__cont img {
   width: 12rem;
   height: 12rem;
@@ -167,6 +275,12 @@ nav a {
   align-items: center;
   flex-wrap: nowrap;
   background-color: lightseagreen;
+}
+.recipedetails h2 {
+  /* Placeholder for future styles */
+}
+.recipedetails .img__cont {
+  /* Placeholder for future styles */
 }
 .recipedetails .img__cont img {
   width: 85vw;
@@ -238,6 +352,13 @@ aside form input {
   padding: 0.35rem;
   border-radius: 1rem;
 }
+aside form .icon--search {
+  /* Placeholder for future styles */
+}
+aside form .icon--search:hover {
+  /* Placeholder for future styles */
+}
+
 .spot {
   display: flex;
   flex-direction: column;
